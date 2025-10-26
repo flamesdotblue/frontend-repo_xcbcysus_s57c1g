@@ -1,6 +1,19 @@
 import React from 'react';
 import { Sparkles, Play } from 'lucide-react';
 
+const LogoStrip = () => (
+  <div className="mt-12">
+    <div className="text-center text-sm text-gray-500">Trusted by modern teams</div>
+    <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 items-center opacity-80">
+      {['Acme Co', 'Globex', 'Umbrella', 'Initech', 'Hooli', 'Stark'].map((name) => (
+        <div key={name} className="h-10 rounded-md bg-gray-100 text-gray-500 grid place-items-center text-xs font-semibold tracking-wide uppercase">
+          {name}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const Hero = () => {
   return (
     <section id="top" className="relative pt-28">
@@ -64,6 +77,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        <LogoStrip />
       </div>
     </section>
   );
