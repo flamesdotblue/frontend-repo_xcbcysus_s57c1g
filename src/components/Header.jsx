@@ -1,32 +1,24 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
 import { Rocket, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
-  const linkClass = ({ isActive }) =>
-    `hover:text-gray-900 ${isActive ? 'text-gray-900 font-semibold' : ''}`;
-
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/70 border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 font-semibold text-gray-900">
+          <a href="#top" className="flex items-center gap-2 font-semibold text-gray-900">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-fuchsia-500 grid place-items-center text-white">
               <Rocket size={18} />
             </div>
             <span className="text-lg">x-voice</span>
-          </Link>
+          </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700">
-            {/* Home section anchors */}
-            <a href="/#features" className="hover:text-gray-900">Features</a>
-            <a href="/#how" className="hover:text-gray-900">How it works</a>
-            <a href="/#templates" className="hover:text-gray-900">Templates</a>
-            {/* Routed pages */}
-            <NavLink to="/use-cases" className={linkClass}>Use cases</NavLink>
-            <NavLink to="/integrations" className={linkClass}>Integrations</NavLink>
-            <NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
-            <a href="/#faq" className="hover:text-gray-900">FAQ</a>
-            <NavLink to="/docs" className={linkClass}>Docs</NavLink>
+            <a href="#features" className="hover:text-gray-900">Features</a>
+            <a href="#how" className="hover:text-gray-900">How it works</a>
+            <a href="#templates" className="hover:text-gray-900">Templates</a>
+            <a href="#integrations" className="hover:text-gray-900">Integrations</a>
+            <a href="#pricing" className="hover:text-gray-900">Pricing</a>
+            <a href="#faq" className="hover:text-gray-900">FAQ</a>
           </nav>
           <div className="flex items-center gap-3">
             <a href="tel:+919025272265" className="hidden lg:inline-flex items-center gap-2 text-sm font-medium text-gray-800 hover:text-gray-900">

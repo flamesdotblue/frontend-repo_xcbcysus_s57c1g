@@ -1,4 +1,5 @@
 import React from 'react';
+import Spline from '@splinetool/react-spline';
 import { Sparkles, Play } from 'lucide-react';
 
 const LogoStrip = () => (
@@ -58,19 +59,14 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-orange-300 p-1 shadow-xl">
-              <div className="h-full w-full rounded-2xl bg-white grid place-items-center">
-                <div className="text-center p-8">
-                  <div className="text-sm uppercase tracking-widest text-indigo-600 font-semibold">Live demo</div>
-                  <div className="mt-2 text-3xl font-extrabold text-gray-900">AI voice that feels human</div>
-                  <p className="mt-4 text-gray-600 max-w-md mx-auto">
-                    Natural speech, real-time understanding, and smart flows that adapt to your callers.
-                  </p>
-                  <button className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-md bg-gray-900 text-white font-semibold hover:bg-gray-800">
-                    <Play size={18} /> Try sample call
-                  </button>
-                </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <div className="h-full w-full">
+                <Spline
+                  scene="https://prod.spline.design/6P7mZxk3qCq2pE2o/scene.splinecode"
+                  style={{ width: '100%', height: '100%' }}
+                />
               </div>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden sm:block">
               <div className="px-4 py-2 rounded-full bg-white shadow-md border text-sm font-medium text-gray-700">Secure • Fast • Reliable</div>
